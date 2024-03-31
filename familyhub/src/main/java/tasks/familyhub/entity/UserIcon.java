@@ -10,7 +10,7 @@ public class UserIcon extends UserImage{
     public UserIcon() {
     }
 
-    public UserIcon(User user, String name, byte[] imageData, String type) {
-        super(user, name, imageData, type);
+    public UserIcon(String name, byte[] imageData, String type) {
+        super(name, imageData, type);
     }
 }

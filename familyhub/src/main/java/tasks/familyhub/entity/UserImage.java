@@ -19,12 +19,11 @@ public abstract class UserImage {
     @Lob
     @Column(name = "photo", columnDefinition="BLOB")
     protected byte[] imageData;
-    @Column( nullable=false )
+
     protected String type;
 
     public UserImage() {}
-    public UserImage(User user, String name, byte[] imageData, String type) {
-        this.user = user;
+    public UserImage(String name, byte[] imageData, String type) {
         this.name = name;
         this.imageData = imageData;
         this.type = type;

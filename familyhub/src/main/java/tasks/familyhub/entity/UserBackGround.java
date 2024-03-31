@@ -10,7 +10,7 @@ public class UserBackGround extends UserImage{
     public UserBackGround() {
     }
 
-    public UserBackGround(User user, String name, byte[] imageData, String type) {
-        super(user, name, imageData, type);
+    public UserBackGround(String name, byte[] imageData, String type) {
+        super(name, imageData, type);
     }
 }
