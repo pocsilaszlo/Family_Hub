@@ -1,24 +1,13 @@
-import { RouterModule, Routes, provideRouter } from '@angular/router';
-import { PostUserComponent } from './users/post-user/post-user.component';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { UserComponent } from './user/user.component';
 
-export const routes: Routes = [
-    { path: '**', component: PostUserComponent },
-    {path : 'users', component : PostUserComponent}
+const routes: Routes = [
+  {path : 'users', component : UserComponent}
 ];
 
-
-export const appRouterProviders = [
-    provideRouter(routes)
-  ];
-  
-
-@NgModule ({
-    imports: [
-        RouterModule.forRoot(routes)
-    ],
-    exports: [
-        RouterModule
-    ],
-    declarations: []
-}) export class AppRoutingModule {}
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
