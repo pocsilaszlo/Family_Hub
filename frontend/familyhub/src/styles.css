@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-size:contain;}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-size: cover; background-attachment: fixed;}
+
+h2 {font-size: 2rem !important;}
+
+h3 {font-size: 1.5rem !important;}
+
+h4 {font-size: 1.2rem !important;}
+
+.content {
+    min-height: 95%;
+    margin: 0;
+}
+
+footer {
+    height: 5%;
+}

@@ -1,0 +1,36 @@
+<app-navbar />
+
+<div class="container">
+
+    <h2>Családtagok</h2>
+    <hr class="mt-0 mb-3">
+ 
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+       <app-card *ngFor="let user of users" [user] = "user" [parentCount] = "getParentCount()" [childCount] = "getChildCount()"> </app-card>
+    </div>
+     
+</div>
+
+<div *ngIf="users.length == 0" class="container">
+    <div class="mt-4" style="display: grid; place-items: center;">
+        <div class="row">
+           <div   class="col md-4">
+              <div class="card  mb-0 mx-auto">
+                 <div class="card-body">
+                 <div class="d-flex align-items-center justify-content-center"> </div>
+                 <p class="text-center">Nincs még felvett családtag, kérjük regisztráljon egyet:</p>
+                 </div>
+                 <div class="card-footer text-center">
+                 <a routerLink="../register" class="btn btn-primary btn-sm">Regisztráció</a>
+                 </div>
+              </div>
+           </div>
+     </div>
+</div>
+  
+<div class="text-center mt-5" >
+   <h2>Szimuláció</h2>
+   <button (click) = "simulate()" class="btn btn-primary">Szimuláció</button>
+ </div>
+
+</div>

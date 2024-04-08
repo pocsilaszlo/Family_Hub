@@ -1,0 +1,30 @@
+<app-navbar />
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card" style="margin: auto;">
+          <div class="card-header">
+            <h3 class="text-center">Bejelentkezés</h3>
+          </div>
+          <div class="card-body d-flex flex-column justify-content-center">
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+              <div class="form-group mb-3">
+                <label for="email" class="form-label">Email cím</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" formControlName="email" required>
+              </div>
+              <div class="form-group mb-3">
+                <label for="password" class="form-label">Jelszó</label>
+                <input type="password" class="form-control" id="password" formControlName="password" required>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Bejelentkezés</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+

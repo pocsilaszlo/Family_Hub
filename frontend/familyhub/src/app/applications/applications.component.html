@@ -1,0 +1,37 @@
+<app-navbar />
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="card border-dark shadow p-3 mb-5 bg-body rounded" style="border: 5px solid black;">
+            <h2>Alkalmazások</h2>
+            <hr class="mt-0 mb-3">
+
+            <div class="container" >
+                <div class="row">
+                  <div *ngFor="let app of apps" class="col-sm-3">
+                    <div class="card border-0 p-3 mb-5 bg-transparent">
+                      <img src="../../assets/box-fill.svg" class="card-img-top" style="margin: 0 auto; max-width:80px">
+                      <div class="card-body p-1 text-center">
+                 
+                        <button mat-button (click)="openDialog({name:app?.name, genre:app?.genre})">{{app?.name}}</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div  class="card-text mt-2 text-center">
+                        <div class="card border-0 p-3 mb-5 bg-transparent">
+                            <img src="../../assets/cart-plus-fill.svg" class="card-img-top" style="margin: 0 auto; max-width:80px">
+                            <div class="card-body p-1 text-center" >
+                              <button mat-button routerLink="../profile"> Alkalmazás hozzáadása</button> 
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

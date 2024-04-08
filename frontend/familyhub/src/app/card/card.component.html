@@ -1,0 +1,20 @@
+<div class="col">
+    <div class="card card-no-gutters mb-0">
+      <div class="card-body">
+        <div class="d-flex align-items-center">
+          <img [src]="this.icon"  class="me-2" style="max-width: 50px;" alt="Profilkép">
+          <div class="flex-grow-1">
+            <h5 class="card-title mb-0">{{user?.name}}</h5>
+            <p class="card-text text-muted mb-1">{{user?.email}}</p>
+            <small class="text-muted">{{user?.role}}</small>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!this.isLoggedIn" class="card-footer text-center">
+        <a routerLink="../login" class="btn btn-primary btn-sm">Bejelentkezés</a>
+      </div>
+      <div *ngIf="this.isLoggedIn && (this.authRole == 'parent' && (this.user?.role =='child' || (this.user?.role == 'parent' && (this.parentCount > 1 || this.childCount == 0))) || this.authRole == 'child' && this.authId == this.user?.id)" class="card-footer text-center">
+          <button (click) = "this.deleteUser(this.user?.id)" class="btn btn-danger btn-sm">Törlés</button>
+      </div>
+    </div>
+  </div>
